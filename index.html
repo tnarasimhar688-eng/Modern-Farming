@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modern Farming</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        🌾 Modern Farming
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#fields">Fields</a>
+        <a href="#loans">Loans</a>
+        <a href="#fertilizers">Fertilizers</a>
+        <a href="#news">News</a>
+        <a href="#services">Services</a>
+        <a href="#faq">FAQ</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+
+<section id="home" class="hero">
+
+    <div class="hero-text">
+
+        <p>SMART FARMING • BETTER FUTURE</p>
+
+        <h1>
+            Grow Smarter With
+            <span>Modern Farming</span>
+        </h1>
+
+        <p>
+            A simple platform for farmers to learn about
+            crops, fertilizers, loans, government schemes,
+            tractors and modern farming technology.
+        </p>
+
+        <button onclick="explore()">
+            Explore Farming
+        </button>
+
+    </div>
+
+    <div class="hero-image">
+        🌱
+        <br>
+        🌾 🌾 🌾
+    </div>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<section class="search">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search farming information..."
+    >
+
+    <button onclick="searchData()">
+        🔍 Search
+    </button>
+
+</section>
+
+
+<!-- FIELDS -->
+
+<section id="fields">
+
+    <h2>🌾 Types of Fields</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div>🌱</div>
+            <h3>Dry Land</h3>
+            <p>
+                Farming areas with limited water
+                availability.
+            </p>
+        </div>
+
+        <div class="card">
+            <div>💧</div>
+            <h3>Irrigated Land</h3>
+            <p>
+                Fields supplied with water through
+                irrigation systems.
+            </p>
+        </div>
+
+        <div class="card">
+            <div>🌿</div>
+            <h3>Organic Farming</h3>
+            <p>
+                Farming using natural methods and
+                organic inputs.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOANS -->
+
+<section id="loans">
+
+    <h2>💰 Farmer Loans</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Agricultural Loans</h3>
+
+            <p>
+                Information about loans that can help
+                farmers with agricultural activities.
+            </p>
+
+            <button onclick="showMessage()">
+                Learn More
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>Equipment Loans</h3>
+
+            <p>
+                Financial support information for
+                agricultural equipment.
+            </p>
+
+            <button onclick="showMessage()">
+                Learn More
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FERTILIZERS -->
+
+<section id="fertilizers">
+
+    <h2>🧪 Fertilizers</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Organic Fertilizers</h3>
+
+            <p>
+                Compost, manure and other natural
+                soil inputs.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Fertilizer Information</h3>
+
+            <p>
+                Learn about fertilizer types and
+                their agricultural uses.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GOVERNMENT -->
+
+<section id="government">
+
+    <h2>🏛️ Government Policies</h2>
+
+    <div class="government-box">
+
+        <h3>Farmer Schemes</h3>
+
+        <p>
+            This section can contain information
+            about government schemes, subsidies and
+            agricultural policies.
+        </p>
+
+        <button onclick="showMessage()">
+            View Schemes
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- NEWS -->
+
+<section id="news">
+
+    <h2>📰 Farming News</h2>
+
+    <div class="news">
+
+        <article>
+            <h3>🌱 Modern Farming Technology</h3>
+
+            <p>
+                Learn how technology can help farmers
+                improve farming practices.
+            </p>
+        </article>
+
+        <article>
+            <h3>💧 Smart Irrigation</h3>
+
+            <p>
+                Modern irrigation techniques can help
+                manage water efficiently.
+            </p>
+        </article>
+
+        <article>
+            <h3>🌾 Sustainable Farming</h3>
+
+            <p>
+                Learn about farming practices focused
+                on soil and water conservation.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- VIDEOS -->
+
+<section id="videos">
+
+    <h2>🎥 Farming Videos</h2>
+
+    <div class="video-box">
+
+        <p>
+            Farming educational videos can be added
+            here.
+        </p>
+
+        <button onclick="openVideos()">
+            Watch Farming Videos
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <h2>🚜 Tractors & Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🚜 Tractors</h3>
+
+            <p>
+                Information about tractors and
+                agricultural machinery.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🔧 Farm Services</h3>
+
+            <p>
+                Information about useful agricultural
+                services and equipment.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <details>
+        <summary>
+            What is Modern Farming?
+        </summary>
+
+        <p>
+            Modern Farming is a digital platform
+            providing useful farming information.
+        </p>
+
+    </details>
+
+
+    <details>
+        <summary>
+            Can farmers use this application?
+        </summary>
+
+        <p>
+            Yes. The application is designed to
+            organize useful agricultural information
+            in one place.
+        </p>
+
+    </details>
+
+
+    <details>
+        <summary>
+            Can live weather be added?
+        </summary>
+
+        <p>
+            Yes. A weather API can be connected
+            to the application.
+        </p>
+
+    </details>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2>📞 Contact Us</h2>
+
+    <div class="contact">
+
+        <input
+            type="text"
+            placeholder="Your Name"
+        >
+
+        <input
+            type="email"
+            placeholder="Your Email"
+        >
+
+        <textarea
+            placeholder="Your Message"
+        ></textarea>
+
+        <button onclick="sendMessage()">
+            Send Message
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>🌾 Modern Farming</h3>
+
+    <p>
+        Smart Farming • Better Future
+    </p>
+
+    <p>
+        © 2026 Modern Farming Project
+    </p>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
