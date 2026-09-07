@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Farming - Login</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #dff5df, #8fd694);
+        }
+
+        .login-box {
+            width: 390px;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,.15);
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #236b35;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0 6px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #2e8b57;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #2e8b57;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #236b35;
+        }
+
+        .register {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register a {
+            color: #2e8b57;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <div class="logo">🌾</div>
+
+    <h1>Modern Farming</h1>
+    <p class="subtitle">Farmer Login</p>
+
+    <form id="loginForm">
+
+        <label>Farmer ID</label>
+        <input
+            type="text"
+            id="farmerId"
+            placeholder="Enter Farmer ID"
+            required
+        >
+
+        <label>Email</label>
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter Email"
+            required
+        >
+
+        <label>Password</label>
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+            required
+        >
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+    <div id="message"></div>
+
+    <div class="register">
+        New Farmer?
+        <a href="register.html">Create Account</a>
+    </div>
+
+</div>
+
+
+<script>
+
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const farmerId = document.getElementById("farmerId").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    /*
+       Demo login for GitHub Pages.
+       Backend connect చేసిన తర్వాత
+       ఈ part ని API request తో replace చేస్తాం.
+    */
+
+    if (
+        farmerId === "FARMER001" &&
+        email === "farmer@example.com" &&
+        password === "123456"
+    ) {
+
+        localStorage.setItem("farmerLoggedIn", "true");
+        localStorage.setItem("farmerId", farmerId);
+
+        document.getElementById("message").style.color = "green";
+        document.getElementById("message").innerText =
+            "Login successful! 🌱";
+
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 1000);
+
+    } else {
+
+        document.getElementById("message").style.color = "red";
+        document.getElementById("message").innerText =
+            "Invalid Farmer ID, Email or Password";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
