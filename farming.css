@@ -1,0 +1,99 @@
+.farming-videos {
+    padding: 80px 7%;
+    background: #f5faf5;
+}
+
+.videos-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.small-title {
+    color: #2e8b57;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.videos-header h2 {
+    font-size: 42px;
+    margin: 10px 0;
+    color: #173b24;
+}
+
+.videos-header p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.video-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.14);
+}
+
+.video-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #111;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-info {
+    padding: 20px;
+}
+
+.video-info span {
+    color: #2e8b57;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.video-info h3 {
+    margin: 8px 0;
+    color: #173b24;
+    font-size: 20px;
+}
+
+.video-info p {
+    color: #777;
+    line-height: 1.6;
+}
+
+
+/* Mobile */
+@media (max-width: 900px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .videos-header h2 {
+        font-size: 32px;
+    }
+}
